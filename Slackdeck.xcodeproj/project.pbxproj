@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1343D78B1EB44D6600D47CF3 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1343D78A1EB44D6600D47CF3 /* Main.xib */; };
 		1343D7911EB4691300D47CF3 /* SlackChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343D7901EB4691300D47CF3 /* SlackChannelView.swift */; };
+		1343D7931EB49FBA00D47CF3 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1343D7921EB49FBA00D47CF3 /* styles.css */; };
 		13DBDA741EB436F000C33E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBDA731EB436F000C33E0C /* AppDelegate.swift */; };
 		13DBDA761EB436F000C33E0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBDA751EB436F000C33E0C /* ViewController.swift */; };
 		13DBDA781EB436F000C33E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13DBDA771EB436F000C33E0C /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		1343D78A1EB44D6600D47CF3 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 		1343D7901EB4691300D47CF3 /* SlackChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackChannelView.swift; sourceTree = "<group>"; };
+		1343D7921EB49FBA00D47CF3 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		13DBDA701EB436F000C33E0C /* Slackdeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slackdeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DBDA731EB436F000C33E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DBDA751EB436F000C33E0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				13DBDA771EB436F000C33E0C /* Assets.xcassets */,
 				13DBDA7C1EB436F000C33E0C /* Info.plist */,
 				1343D78A1EB44D6600D47CF3 /* Main.xib */,
+				1343D7921EB49FBA00D47CF3 /* styles.css */,
 			);
 			path = Slackdeck;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1343D7931EB49FBA00D47CF3 /* styles.css in Resources */,
 				1343D78B1EB44D6600D47CF3 /* Main.xib in Resources */,
 				13DBDA781EB436F000C33E0C /* Assets.xcassets in Resources */,
 			);

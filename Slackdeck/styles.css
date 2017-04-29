@@ -1,0 +1,27 @@
+#messages_container {
+    margin-left: 0;
+}
+
+#notification_bar {
+    width: 100vw;
+}
+
+.client_channels_list_container {
+    display: none;
+}
+
+#channel_header_info {
+    overflow: hidden;
+}
+
+#client_header {
+    min-width: 0;
+}
+
+#client_header .channel_header {
+    margin-left: 0;
+}
+
+body {
+    min-width: 0;
+}
