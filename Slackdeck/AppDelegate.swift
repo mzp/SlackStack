@@ -11,6 +11,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window : NSWindow!
+    private var rootViewController : ViewController {
+        get{
+            return window.contentViewController as! ViewController
+        }
+    }
+
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         window.title = "Slackdeck"
@@ -21,6 +27,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+    @IBAction func removeChannel(_ sender: Any) {
+    }
 
+    @IBAction func addChannel(_ sender: Any) {
+    }
+
+    @IBAction func logout(_ sender: Any) {
+    }
 }
 
