@@ -56,7 +56,11 @@ class ViewController: NSViewController {
         showChannels()
     }
 
-    func removeChannel() {
+    func removeChannel(responder : NSResponder) {
+        self.channels = channels.filter { ch in
+            ch != responder
+        }
+        showChannels()
     }
 
     private func showChannels() {

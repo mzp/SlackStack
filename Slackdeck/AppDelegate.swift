@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func removeChannel(_ sender: Any) {
+        rootViewController.removeChannel(responder: window.firstResponder)
     }
 
     @IBAction func addChannel(_ sender: Any) {
