@@ -31,6 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func addChannel(_ sender: Any) {
+        rootViewController.addChannel()
     }
 
     @IBAction func logout(_ sender: Any) {

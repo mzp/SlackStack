@@ -9,12 +9,12 @@
 import Cocoa
 import WebKit
 import NorthLayout
+import Ikemen
 
 fileprivate let configuration = WKWebViewConfiguration()
 
 class ViewController: NSViewController {
-    private lazy var left = SlackChannelView(configuration: configuration)
-    private lazy var right = SlackChannelView(configuration: configuration)
+    private var channels : [SlackChannelView] = []
 
     override func loadView() {
         if let frame = NSScreen.main()?.frame {
@@ -24,27 +24,22 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        channels = Prefercences.urls.map { url in
+            SlackChannelView(configuration: configuration) ※ { wk in
+                wk.loadURL(url: url)
+            }
+        }
     }
 
     override func viewDidAppear() {
-        let autolayout = view.northLayoutFormat([:], [
-            "left" : left,
-            "right": right
-        ])
-        autolayout("V:|[left]|")
-        autolayout("V:|[right]|")
-        autolayout("H:|[left][right(==left)]|")
-
-        let urls = Prefercences.urls
-        left.loadURL(url: urls[0])
-        right.loadURL(url: urls[1])
+        showChannels()
     }
 
     override func viewWillDisappear() {
-        Prefercences.urls = [
-            left.url!.absoluteString,
-            right.url!.absoluteString
-        ]
+        Prefercences.urls = channels.flatMap({ channel in
+            channel.url?.absoluteString
+        })
     }
 
     override var representedObject: Any? {
@@ -52,5 +47,48 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-}
 
+    // MARK: channel
+    func addChannel() {
+        self.channels.append(SlackChannelView(configuration: configuration) ※ { wk in
+            wk.loadURL(url: "https://misoca-inc.slack.com")
+        })
+        showChannels()
+    }
+
+    func removeChannel() {
+    }
+
+    private func showChannels() {
+        view.subviews.forEach { $0.removeFromSuperview() }
+
+        switch channels.count {
+        case 1:
+            let autolayout = view.northLayoutFormat([:], [
+                "c0": channels[0]
+                ])
+            autolayout("V:|[c0]|")
+            autolayout("H:|[c0]|")
+        case 2:
+            let autolayout = view.northLayoutFormat([:], [
+                "c0": channels[0],
+                "c1": channels[1]
+                ])
+            autolayout("V:|[c0]|")
+            autolayout("V:|[c1]|")
+            autolayout("H:|[c0][c1(==c0)]|")
+        case 3:
+            let autolayout = view.northLayoutFormat([:], [
+                "c0": channels[0],
+                "c1": channels[1],
+                "c2": channels[2]
+                ])
+            autolayout("V:|[c0]|")
+            autolayout("V:|[c1]|")
+            autolayout("V:|[c2]|")
+            autolayout("H:|[c0][c1(==c0)][c2(==c0)]|")
+        default:
+            ()
+        }
+    }
+}
