@@ -12,9 +12,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window : NSWindow!
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        window.title = "Slackdeck"
+        window.contentViewController = ViewController(nibName: nil, bundle: nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

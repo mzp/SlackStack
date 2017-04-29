@@ -9,11 +9,14 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    override func loadView() {
+        if let frame = NSScreen.main()?.frame {
+            self.view = NSView(frame: NSMakeRect(0, 0, frame.width * 0.8, frame.height * 0.8))
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override var representedObject: Any? {
@@ -21,7 +24,5 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 
