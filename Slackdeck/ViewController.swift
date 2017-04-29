@@ -10,8 +10,11 @@ import Cocoa
 import WebKit
 import NorthLayout
 
+fileprivate let configuration = WKWebViewConfiguration()
+
 class ViewController: NSViewController {
-    private var webView : WKWebView?
+    private lazy var left = SlackChannelView(configuration: configuration)
+    private lazy var right = SlackChannelView(configuration: configuration)
 
     override func loadView() {
         if let frame = NSScreen.main()?.frame {
@@ -24,20 +27,13 @@ class ViewController: NSViewController {
     }
 
     override func viewDidAppear() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-
         let autolayout = view.northLayoutFormat([:], [
-            "webView" :  webView!
+            "left" : left,
+            "right": right
         ])
-        autolayout("V:|[webView]|")
-        autolayout("H:|[webView]|")
-
-        // spoof useragent to skip slack check
-        webView?.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4"
-        let url = URL(string: "https://misoca-inc.slack.com")
-        let request = URLRequest(url: url!)
-        webView?.load(request)
+        autolayout("V:|[left]|")
+        autolayout("V:|[right]|")
+        autolayout("H:|[left][right(==left)]|")
     }
 
     override var representedObject: Any? {
