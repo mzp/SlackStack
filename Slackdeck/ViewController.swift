@@ -34,6 +34,17 @@ class ViewController: NSViewController {
         autolayout("V:|[left]|")
         autolayout("V:|[right]|")
         autolayout("H:|[left][right(==left)]|")
+
+        let urls = Prefercences.urls
+        left.loadURL(url: urls[0])
+        right.loadURL(url: urls[1])
+    }
+
+    override func viewWillDisappear() {
+        Prefercences.urls = [
+            left.url!.absoluteString,
+            right.url!.absoluteString
+        ]
     }
 
     override var representedObject: Any? {
