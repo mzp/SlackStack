@@ -15,6 +15,7 @@ fileprivate let configuration = WKWebViewConfiguration()
 
 class ViewController: NSViewController {
     private var channels : [SlackChannelView] = []
+    private let stackView = NSStackView()
 
     override func loadView() {
         if let frame = NSScreen.main()?.frame {
@@ -33,6 +34,13 @@ class ViewController: NSViewController {
     }
 
     override func viewDidAppear() {
+        stackView.spacing = 0.0
+        stackView.distribution = .fillEqually
+        let autolayout = view.northLayoutFormat([:], [
+            "stack": stackView
+        ])
+        autolayout("V:|[stack]|")
+        autolayout("H:|[stack]|")
         showChannels()
     }
 
@@ -64,35 +72,6 @@ class ViewController: NSViewController {
     }
 
     private func showChannels() {
-        view.subviews.forEach { $0.removeFromSuperview() }
-
-        switch channels.count {
-        case 1:
-            let autolayout = view.northLayoutFormat([:], [
-                "c0": channels[0]
-                ])
-            autolayout("V:|[c0]|")
-            autolayout("H:|[c0]|")
-        case 2:
-            let autolayout = view.northLayoutFormat([:], [
-                "c0": channels[0],
-                "c1": channels[1]
-                ])
-            autolayout("V:|[c0]|")
-            autolayout("V:|[c1]|")
-            autolayout("H:|[c0][c1(==c0)]|")
-        case 3:
-            let autolayout = view.northLayoutFormat([:], [
-                "c0": channels[0],
-                "c1": channels[1],
-                "c2": channels[2]
-                ])
-            autolayout("V:|[c0]|")
-            autolayout("V:|[c1]|")
-            autolayout("V:|[c2]|")
-            autolayout("H:|[c0][c1(==c0)][c2(==c0)]|")
-        default:
-            ()
-        }
+        stackView.setViews(channels, in: .leading)
     }
 }
