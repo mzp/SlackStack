@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1343D78B1EB44D6600D47CF3 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1343D78A1EB44D6600D47CF3 /* Main.xib */; };
 		13DBDA741EB436F000C33E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBDA731EB436F000C33E0C /* AppDelegate.swift */; };
 		13DBDA761EB436F000C33E0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBDA751EB436F000C33E0C /* ViewController.swift */; };
 		13DBDA781EB436F000C33E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13DBDA771EB436F000C33E0C /* Assets.xcassets */; };
-		13DBDA7B1EB436F000C33E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DBDA791EB436F000C33E0C /* Main.storyboard */; };
 		BAD25D5F5CF3A54EF2E9E8A5 /* Pods_Slackdeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D582C90F4F5B13CE5A5A5CE /* Pods_Slackdeck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1343D78A1EB44D6600D47CF3 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 		13DBDA701EB436F000C33E0C /* Slackdeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slackdeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DBDA731EB436F000C33E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DBDA751EB436F000C33E0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13DBDA771EB436F000C33E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		13DBDA7A1EB436F000C33E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13DBDA7C1EB436F000C33E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D582C90F4F5B13CE5A5A5CE /* Pods_Slackdeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slackdeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8AB763F5A90D56DD48090D /* Pods-Slackdeck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slackdeck.release.xcconfig"; path = "Pods/Target Support Files/Pods-Slackdeck/Pods-Slackdeck.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 				13DBDA731EB436F000C33E0C /* AppDelegate.swift */,
 				13DBDA751EB436F000C33E0C /* ViewController.swift */,
 				13DBDA771EB436F000C33E0C /* Assets.xcassets */,
-				13DBDA791EB436F000C33E0C /* Main.storyboard */,
 				13DBDA7C1EB436F000C33E0C /* Info.plist */,
+				1343D78A1EB44D6600D47CF3 /* Main.xib */,
 			);
 			path = Slackdeck;
 			sourceTree = "<group>";
@@ -148,8 +148,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1343D78B1EB44D6600D47CF3 /* Main.xib in Resources */,
 				13DBDA781EB436F000C33E0C /* Assets.xcassets in Resources */,
-				13DBDA7B1EB436F000C33E0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,17 +214,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		13DBDA791EB436F000C33E0C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13DBDA7A1EB436F000C33E0C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		13DBDA7D1EB436F000C33E0C /* Debug */ = {
@@ -368,6 +357,7 @@
 				13DBDA811EB436F000C33E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
