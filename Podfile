@@ -5,4 +5,5 @@ target 'Slackdeck' do
   use_frameworks!
 
   pod 'NorthLayout'
+  pod '※ikemen'
 end
