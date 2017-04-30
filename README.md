@@ -4,7 +4,12 @@ Slack☆Stack is multi-column/multi-row slack client to overview many channels a
 ![](https://raw.githubusercontent.com/mzp/SlackStack/master/docs/screenshot.png)
 
 ## :star: Usage
-:construction:
+
+1. Go to the [releases page](https://github.com/mzp/SlackStack/releases), find the version you want.
+2. Download the file.
+3. Create row at "SlackStack" -> "Add row" from menu item.
+4. Login your slack team.
+5. Create row/column as you like.
 
 ## :wrench: build
 
