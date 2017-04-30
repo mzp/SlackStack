@@ -22,7 +22,7 @@
 		1343D7901EB4691300D47CF3 /* SlackChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackChannelView.swift; sourceTree = "<group>"; };
 		1343D7921EB49FBA00D47CF3 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		1343D7961EB4AE5100D47CF3 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		13DBDA701EB436F000C33E0C /* Slackdeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slackdeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DBDA701EB436F000C33E0C /* SlackStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DBDA731EB436F000C33E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DBDA751EB436F000C33E0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13DBDA771EB436F000C33E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		13DBDA711EB436F000C33E0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13DBDA701EB436F000C33E0C /* Slackdeck.app */,
+				13DBDA701EB436F000C33E0C /* SlackStack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13DBDA6F1EB436F000C33E0C /* Slackdeck */ = {
+		13DBDA6F1EB436F000C33E0C /* SlackStack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13DBDA7F1EB436F000C33E0C /* Build configuration list for PBXNativeTarget "Slackdeck" */;
+			buildConfigurationList = 13DBDA7F1EB436F000C33E0C /* Build configuration list for PBXNativeTarget "SlackStack" */;
 			buildPhases = (
 				11BD8E170D9B9EE849AD9196 /* [CP] Check Pods Manifest.lock */,
 				13DBDA6C1EB436F000C33E0C /* Sources */,
@@ -112,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = Slackdeck;
+			name = SlackStack;
 			productName = Slackdeck;
-			productReference = 13DBDA701EB436F000C33E0C /* Slackdeck.app */;
+			productReference = 13DBDA701EB436F000C33E0C /* SlackStack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 13DBDA6B1EB436F000C33E0C /* Build configuration list for PBXProject "Slackdeck" */;
+			buildConfigurationList = 13DBDA6B1EB436F000C33E0C /* Build configuration list for PBXProject "SlackStack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13DBDA6F1EB436F000C33E0C /* Slackdeck */,
+				13DBDA6F1EB436F000C33E0C /* SlackStack */,
 			);
 		};
 /* End PBXProject section */
@@ -353,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13DBDA6B1EB436F000C33E0C /* Build configuration list for PBXProject "Slackdeck" */ = {
+		13DBDA6B1EB436F000C33E0C /* Build configuration list for PBXProject "SlackStack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13DBDA7D1EB436F000C33E0C /* Debug */,
@@ -362,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13DBDA7F1EB436F000C33E0C /* Build configuration list for PBXNativeTarget "Slackdeck" */ = {
+		13DBDA7F1EB436F000C33E0C /* Build configuration list for PBXNativeTarget "SlackStack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13DBDA801EB436F000C33E0C /* Debug */,

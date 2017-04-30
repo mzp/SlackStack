@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Slackdeck.xcodeproj">
+      location = "group:/Users/mzp/git/Slackdeck/SlackStack.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
