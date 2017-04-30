@@ -9,7 +9,8 @@ Slack☆Stack is multi-column/multi-row slack client to overview many channels a
 2. Download the file.
 3. Create row at "SlackStack" -> "Add row" from menu item.
 4. Login your slack team.
-5. Create row/column as you like.
+5. Switch channel by `Cmd` + `k`.
+6. Create row/column as you like.
 
 ## :wrench: build
 
