@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - channel
     @IBAction func addChannel(_ sender: Any) {
-        rootViewController.addChannel()
+        rootViewController.addChannel(responder: window.firstResponder)
     }
 
     @IBAction func removeChannel(_ sender: Any) {
