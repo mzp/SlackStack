@@ -17,8 +17,8 @@ struct Prefercences {
         defaults.synchronize()
     }
 
-    static var urls: [String] {
-        get { return defaults.array(forKey: kUrls) as! [String] }
+    static var urls: [[String]] {
+        get { return defaults.array(forKey: kUrls) as! [[String]] }
         set { save(object: newValue as AnyObject, forKey: kUrls) }
     }
 }
