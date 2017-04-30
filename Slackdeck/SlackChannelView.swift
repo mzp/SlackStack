@@ -36,9 +36,12 @@ class SlackChannelView: WKWebView, WKNavigationDelegate, WKUIDelegate {
         guard let url = navigationAction.request.url else {
             return nil
         }
-
         guard let targetFrame = navigationAction.targetFrame, targetFrame.isMainFrame else {
-            NSWorkspace.shared().open(url)
+            if isSlackTeam(url: url.absoluteString) {
+                self.loadURL(url: url.absoluteString)
+            } else {
+                NSWorkspace.shared().open(url)
+            }
             return nil
         }
         return nil
@@ -52,5 +55,10 @@ class SlackChannelView: WKWebView, WKNavigationDelegate, WKUIDelegate {
             return
         }
         evaluateJavaScript("var style = document.createElement('style'); style.innerHTML = '\(cssString)'; document.head.appendChild(style); null")
+    }
+
+    private func isSlackTeam(url : String) -> Bool {
+        let range = url.range(of: "^https://.*\\.slack\\.com/$", options: .regularExpression)
+        return range != nil
     }
 }

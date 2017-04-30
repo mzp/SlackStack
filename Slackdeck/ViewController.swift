@@ -11,6 +11,7 @@ import WebKit
 import NorthLayout
 import Ikemen
 
+fileprivate let kSlackURL = "https://slack.com/"
 fileprivate let configuration = WKWebViewConfiguration()
 
 class ViewController: NSViewController {
@@ -102,7 +103,7 @@ class ViewController: NSViewController {
     // MARK: - URL
     private var defaultUrl : String {
         get {
-            return "https://misoca-inc.slack.com"
+            return kSlackURL
         }
     }
 }
