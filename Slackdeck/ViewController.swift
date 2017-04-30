@@ -66,6 +66,14 @@ class ViewController: NSViewController {
         showChannels()
     }
 
+    // MARK: - row
+    func addRow() {
+    }
+
+    func removeRow(responder : NSResponder) {
+    }
+
+    // MARK: - view
     private func showChannels() {
         stackView.setViews(channels, in: .leading)
     }

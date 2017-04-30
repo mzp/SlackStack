@@ -82,6 +82,19 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
+                            <menuItem title="Add row" id="byi-Ux-UR0">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="addRow:" target="ZSW-h7-2TW" id="XrZ-Tf-Bxd"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Remove row" id="nBI-46-2I4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="removeRow:" target="ZSW-h7-2TW" id="x8H-FE-Uyk"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="NIY-bc-4NX"/>
                             <menuItem title="Logout" id="aTl-1u-JFS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>

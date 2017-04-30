@@ -27,14 +27,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-    @IBAction func removeChannel(_ sender: Any) {
-        rootViewController.removeChannel(responder: window.firstResponder)
-    }
-
+    // MARK: - channel
     @IBAction func addChannel(_ sender: Any) {
         rootViewController.addChannel()
     }
 
+    @IBAction func removeChannel(_ sender: Any) {
+        rootViewController.removeChannel(responder: window.firstResponder)
+    }
+
+    // MARK: - row
+    @IBAction func addRow(_ sender: Any) {
+        rootViewController.addRow()
+    }
+
+    @IBAction func removeRow(_ sender: Any) {
+        rootViewController.removeRow(responder: window.firstResponder)
+    }
+
+    // MARK: - session
     @IBAction func logout(_ sender: Any) {
     }
 }
