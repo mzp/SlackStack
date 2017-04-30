@@ -1,6 +1,8 @@
 # :books: Slack + Stack = Win
 Slack☆Stack is multi-column/multi-row slack client to overview many channels at a glance.
 
+![](https://raw.githubusercontent.com/mzp/SlackStack/master/docs/screenshot.png)
+
 ## :star: Usage
 :construction:
 
