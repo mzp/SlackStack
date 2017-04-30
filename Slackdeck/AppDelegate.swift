@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        window.title = "Slackdeck"
+        window.title = "Slack☆Stack"
         window.contentViewController = ViewController(nibName: nil, bundle: nil)
     }
 
