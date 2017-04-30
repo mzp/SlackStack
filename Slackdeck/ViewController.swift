@@ -15,7 +15,10 @@ fileprivate let configuration = WKWebViewConfiguration()
 
 class ViewController: NSViewController {
     private var channels : [SlackChannelView] = []
-    private let stackView = NSStackView()
+    private let stackView = NSStackView() ※ { sv in
+        sv.spacing = 0.0
+        sv.distribution = .fillEqually
+    }
 
     override func loadView() {
         if let frame = NSScreen.main()?.frame {
@@ -34,8 +37,6 @@ class ViewController: NSViewController {
     }
 
     override func viewDidAppear() {
-        stackView.spacing = 0.0
-        stackView.distribution = .fillEqually
         let autolayout = view.northLayoutFormat([:], [
             "stack": stackView
         ])
