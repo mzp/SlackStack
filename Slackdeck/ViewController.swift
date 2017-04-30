@@ -56,10 +56,10 @@ class ViewController: NSViewController {
         }
     }
 
-    // MARK: channel
+    // MARK: - channel
     func addChannel() {
         self.channels.append(SlackChannelView(configuration: configuration) ※ { wk in
-            wk.loadURL(url: "https://misoca-inc.slack.com")
+            wk.loadURL(url: defaultUrl)
         })
         showChannels()
     }
@@ -73,5 +73,12 @@ class ViewController: NSViewController {
 
     private func showChannels() {
         stackView.setViews(channels, in: .leading)
+    }
+
+    // MARK: - URL
+    private var defaultUrl : String {
+        get{
+            return self.channels.first?.url?.absoluteString ?? "https://slack.com"
+        }
     }
 }
