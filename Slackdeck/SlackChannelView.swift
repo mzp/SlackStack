@@ -47,7 +47,7 @@ class SlackChannelView: WKWebView, WKNavigationDelegate, WKUIDelegate {
         return nil
     }
 
-    func insertContentsOfCSSFile(into webView: WKWebView) {
+    private func insertContentsOfCSSFile(into webView: WKWebView) {
         guard let path = Bundle.main.path(forResource: "styles", ofType: "css") else {
             return
         }
