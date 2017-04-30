@@ -4,7 +4,10 @@ Slack☆Stack is multi-column/multi-row slack client to overview many channels a
 ## :star: Usage
 :construction:
 
-## :copyright:
+## :pray: Acknowleadge
+Icons made by [Freepik](http://www.freepik.com) from [www.flaticon.com](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+
+## :copyright: LICENSE
 MIT
 
 ## :+1: Commit symbol
