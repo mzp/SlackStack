@@ -18,7 +18,7 @@ struct Prefercences {
     }
 
     static var urls: [[String]] {
-        get { return defaults.array(forKey: kUrls) as! [[String]] }
+        get { return (defaults.array(forKey: kUrls) as? [[String]]) ?? [] }
         set { save(object: newValue as AnyObject, forKey: kUrls) }
     }
 }
