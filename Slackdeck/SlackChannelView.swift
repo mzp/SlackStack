@@ -55,10 +55,21 @@ class SlackChannelView: WKWebView, WKNavigationDelegate, WKUIDelegate {
             return
         }
         evaluateJavaScript("var style = document.createElement('style'); style.innerHTML = '\(cssString)'; document.head.appendChild(style); null")
+        evaluateJavaScript("window.__style__ = document.createElement('style'); document.head.appendChild(__style__); null")
     }
 
     private func isSlackTeam(url : String) -> Bool {
         let range = url.range(of: "^https://.*\\.slack\\.com/$", options: .regularExpression)
         return range != nil
+    }
+
+    override func becomeFirstResponder() -> Bool {
+        evaluateJavaScript("__style__.innerHTML = '.ql-editor { }'; null")
+        return super.becomeFirstResponder()
+    }
+
+    override func resignFirstResponder() -> Bool {
+        evaluateJavaScript("__style__.innerHTML = '.ql-editor { background-color: #efefef }'; null")
+        return super.becomeFirstResponder()
     }
 }
