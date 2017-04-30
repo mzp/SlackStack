@@ -103,7 +103,7 @@ class ViewController: NSViewController {
     // MARK: - URL
     private var defaultUrl : String {
         get {
-            return kSlackURL
+            return self.channels.first?.first?.url?.absoluteString ?? kSlackURL
         }
     }
 }
