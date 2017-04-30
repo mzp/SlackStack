@@ -9,10 +9,11 @@
 import Cocoa
 import WebKit
 
-class SlackChannelView: WKWebView, WKNavigationDelegate {
+class SlackChannelView: WKWebView, WKNavigationDelegate, WKUIDelegate {
     init(configuration : WKWebViewConfiguration) {
         super.init(frame: .zero, configuration: configuration)
         self.navigationDelegate = self
+        self.uiDelegate = self
         self.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4"
     }
 
@@ -29,6 +30,18 @@ class SlackChannelView: WKWebView, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         insertContentsOfCSSFile(into: webView)
+    }
+
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        guard let url = navigationAction.request.url else {
+            return nil
+        }
+
+        guard let targetFrame = navigationAction.targetFrame, targetFrame.isMainFrame else {
+            NSWorkspace.shared().open(url)
+            return nil
+        }
+        return nil
     }
 
     func insertContentsOfCSSFile(into webView: WKWebView) {
