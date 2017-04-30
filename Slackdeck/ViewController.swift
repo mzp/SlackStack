@@ -46,14 +46,8 @@ class ViewController: NSViewController {
     }
 
     override func viewWillDisappear() {
-        Prefercences.urls = channels.flatMap({ channel in
+        Prefercences.urls = channels.flatMap { channel in
             channel.url?.absoluteString
-        })
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
         }
     }
 
@@ -78,8 +72,8 @@ class ViewController: NSViewController {
 
     // MARK: - URL
     private var defaultUrl : String {
-        get{
-            return self.channels.first?.url?.absoluteString ?? "https://slack.com"
+        get {
+            return self.channels.first?.url?.absoluteString ?? "https://misoca-inc.slack.com"
         }
     }
 }
