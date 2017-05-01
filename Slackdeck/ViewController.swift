@@ -31,7 +31,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        channels = Prefercences.urls.map { row in
+        channels = Preferences.urls.map { row in
             row.flatMap { url in
                 SlackChannelView(configuration: configuration) ※ { wk in
                     wk.loadURL(url: url)
@@ -50,7 +50,7 @@ class ViewController: NSViewController {
     }
 
     override func viewWillDisappear() {
-        Prefercences.urls = channels.map { row in
+        Preferences.urls = channels.map { row in
             row.flatMap { ch in ch.url?.absoluteString }
         }
     }
