@@ -44,6 +44,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func removeRow(_ sender: Any) {
         rootViewController.removeRow(responder: window.firstResponder)
     }
+    
+    // MARK: - history
+    @IBAction func back(_ sender: Any) {
+        rootViewController.back(responder: window.firstResponder)
+    }
+
+    @IBAction func forward(_ sender: Any) {
+        rootViewController.forward(responder: window.firstResponder)
+    }
 
     // MARK: - session
     @IBAction func logout(_ sender: Any) {

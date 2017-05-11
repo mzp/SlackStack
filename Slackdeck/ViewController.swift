@@ -88,6 +88,17 @@ class ViewController: NSViewController {
         showChannels()
     }
 
+    // MARK: - history
+    func back(responder : NSResponder) {
+        guard let wk = responder as? SlackChannelView else { return }
+        wk.goBack()
+    }
+
+    func forward(responder : NSResponder) {
+        guard let wk = responder as? SlackChannelView else { return }
+        wk.goForward()
+    }
+
     // MARK: - view
     private func showChannels() {
         let views = channels.map { row in
