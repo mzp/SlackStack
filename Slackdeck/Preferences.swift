@@ -11,7 +11,7 @@ import Foundation
 fileprivate let defaults = UserDefaults.standard
 fileprivate let kUrls = "urls"
 
-struct Prefercences {
+struct Preferences {
     private static func save(object: AnyObject?, forKey key: String) {
         defaults.set(object, forKey: key)
         defaults.synchronize()
